@@ -1,0 +1,98 @@
+{
+  "width": 300,
+  "height": 2400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/whuo0004/3179DV2/main/Datasets/rankings_ds.csv"
+  },
+  "params": [
+    {
+      "name": "cs",
+      "value": "ovr_rank",
+      "bind": {
+        "input": "select",
+        "options": [
+          "ovr_rank",
+          "tch_rank",
+          "res_rank",
+          "cit_rank",
+          "ind_rank",
+          "int_rank",
+          "std_rank",
+          "stf_rank"
+        ],
+        "labels": [
+          "Overall Ranking",
+          "Teaching Ranking",
+          "Research Ranking",
+          "Citation Ranking",
+          "Industry Income Ranking",
+          "International Outlook Ranking",
+          "No. of Students Ranking",
+          "Student to Staff Ratio Ranking"
+        ],
+        "name": "Select Ranking:"
+      }
+    },
+    {
+      "name": "sc",
+      "value": "ovr_score",
+      "bind": {
+        "input": "select",
+        "options": [
+          "ovr_score",
+          "tch_score",
+          "res_score",
+          "cit_score",
+          "ind_score",
+          "int_score",
+          "std_stat",
+          "stf_stat"
+        ],
+        "labels": [
+          "Overall Score",
+          "Teaching Score",
+          "Research Score",
+          "Citation Score",
+          "Industry Income Score",
+          "International Outlook Score",
+          "No. of Students",
+          "Student to Staff Ratio"
+        ],
+        "name": "Select Score:"
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "datum[cs]", "as": "selectedCriteriaRank"},
+    {"calculate": "datum[sc]", "as": "selectedCriteriaScore"},
+    {"filter": {"field": "selectedCriteriaRank", "lte": 50}}
+  ],
+  "mark": {
+    "type":"bar",
+    "color": "#008080"
+  },
+  "encoding": {
+    "x": {
+      "field": "selectedCriteriaScore",
+      "type": "quantitative",
+      "axis": {"title": "Score", "titleColor": "white", "labelColor": "white"}
+    },
+    "y": {
+      "field": "name",
+      "type": "nominal",
+      "sort": {"field": "selectedCriteriaRank", "order": "ascending"},
+      "axis": {"title": "University Names", "titleColor": "white", "labelColor": "white"}
+    },
+    "tooltip": [
+      {"field": "name", "title": "University"},
+      {"field": "selectedCriteriaRank", "title": "Rank in Chosen Ranking"},
+      {"field": "selectedCriteriaScore", "title": "Score in Chosen Indicator"}
+    ]
+  },
+  "config": {
+    "background":null,
+    "parameter": {
+      "separator": "above"
+    }
+  }
+}
