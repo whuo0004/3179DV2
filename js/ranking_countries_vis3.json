@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "width": 800,
+      "height": 400,
+      "projection": {"type": "naturalEarth1"},
+      "data": {
+        "url": "https://raw.githubusercontent.com/whuo0004/3179/main/worldmap.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/whuo0004/3179DV2/main/Datasets/rankings_country.csv"
+            },
+            "key": "location",
+            "fields": ["location", "loc_count"]
+          }
+        },
+        {"calculate": "datum.loc_count + 1", "as": "Number of Universities"}
+      ],
+      "mark": {"type": "geoshape", "stroke": "gray", "strokeWidth": 1},
+      "encoding": {
+        "color": {
+          "field": "Number of Universities",
+          "type": "quantitative",
+          "scale": {"type": "log", "scheme": "bluegreen", "domain": ["1", "160"]}
+        },
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+          {
+            "field": "loc_count",
+            "type": "quantitative",
+            "title": "No. of University in Top 1000"
+          }
+        ]
+      },
+      "config": {
+        "background":"skyblue"
+      }
+    }
