@@ -65,6 +65,7 @@
                 located on the top of the screen.
             </p>
             <h6>Photo by Thomas Hobiger obtained from Pexels</h6>
+            <h5>Scroll down or Select a section</h5>
         </div>
     </div>
     <div class="content-wrapper" style="background-color: #272727;">
@@ -73,7 +74,7 @@
                 <section id="Rankings" style="border: 2px solid #000">
                     <div class="content">
                         <br>
-                        <h2>This is Visualisation 1</h2>
+                        <h2>Rankings fluctuation of Top 20 University in 2023 (2013-2023)</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at lacus sit amet metus
                             imperdiet maximus nec sit amet nisi. Donec ac tortor mi. Donec scelerisque feugiat
@@ -292,20 +293,25 @@
                 </section>
             </div>
             <div class="pure-u-1 pure-u-md-1-3" style="border: 4px solid #000">
-                <h2 style="padding-left: 25px; padding-top: 45px">Top 50 University by Chosen Ranking and Chosen Indicator 2023</h2>
-                <div id="vis1"></div>
+                <h2 style="padding-left: 25px; padding-top: 45px">Top 50 University by Chosen Ranking and Chosen
+                    Indicator 2023</h2>
+                <p style="padding-left:25px">The following chart visualises the rankings and the indicator scores
+                    selected by the User. The chart is sorted based on the rankings selected where the first row will be
+                    the university ranked 1 in the selected ranking and the bar visualises the score obtained by the
+                    university in the selected indicator. By hovering over the bar, the tooltip shows the values in details.
+                    <br><br>
+                    The filters are available at the bottom of the chart.
+                </p>
+                <br>
+                <div id="vis1" style="width: 100%; height: 70%;"></div>
                 <script type="text/javascript">
-
                     var spec2 = "js/ranking2023_vis1.json";
-                    vegaEmbed('#vis1', spec2).then(function(result) {
+                    vegaEmbed('#vis1', spec2).then(function (result) {
                     }).catch(console.error);
-                  </script>
+                </script>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <div class="footer l-box is-center" style="color: rgb(255, 255, 255);">
+        <div class="footer" style="color: rgb(255, 255, 255);">
             Designed and Created by Huong Wen Cheng (32022905)<br>
             Data obtained from <b>Andrii Kapatsyn's</b> dataset on <b>THE World University Rankings 2011-2023</b>
             available on Kaggle. Link: <a

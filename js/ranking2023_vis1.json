@@ -1,6 +1,6 @@
 {
-  "width": 300,
-  "height": 2400,
+  "width": "container",
+  "height": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/whuo0004/3179DV2/main/Datasets/rankings_ds.csv"
   },
