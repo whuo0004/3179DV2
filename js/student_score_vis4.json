@@ -1,0 +1,56 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/whuo0004/3179DV2/main/Datasets/student_scores.csv"
+    },
+    "params": [{
+        "name": "cs",
+        "value": "scores_overall",
+        "bind": {
+          "input": "select",
+          "options": [
+            "scores_overall",
+            "scores_teaching",
+            "scores_research",
+            "scores_citations",
+            "scores_industry_income",
+            "scores_international_outlook"
+          ],
+          "labels": [
+            "Overall Scores",
+            "Teaching Scores",
+            "Research Scores",
+            "Citation Scores",
+            "Industry Income Scores",
+            "International Outlook Scores"
+          ],
+          "name": "Select Scores:"
+        }
+        }
+      ],
+    "transform": [
+      {
+        "calculate": "parseInt(datum.stats_number_students)",
+        "as": "stdNo"
+      },
+      {"calculate": "datum[cs]", "as": "selectedCriteria"}
+    ],
+    "mark": "point",
+    "encoding": {
+      "x": {"field": "stdNo", "type": "quantitative", "title":"No. of Students (Thousands)", "axis":{"titleColor":"white"}},
+      "y": {"field": "selectedCriteria", "type": "quantitative", "title":"Selected Score", "scale": {"domain": [30, 100], "nice": true}, "axis":{"titleColor":"white"}},
+      "color":{
+        "field":"name",
+        "scale":{"scheme":"category20"}
+      },
+      "tooltip": [
+        {"field": "name", "title": "University"},
+        {"field": "selectedCriteria", "title": "Score"},
+        {"field": "stats_number_students", "title": "No. of Students"}
+      ]
+    },
+    "config": {
+        "background":null,
+        "legend": {"disable": true}
+      }
+  }
