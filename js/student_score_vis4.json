@@ -1,5 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": "container",
     "data": {
       "url": "https://raw.githubusercontent.com/whuo0004/3179DV2/main/Datasets/student_scores.csv"
     },
@@ -26,19 +28,38 @@
           ],
           "name": "Select Scores:"
         }
+        },
+        {
+        "name": "sc",
+        "value": "stats_number_students",
+        "bind": {
+          "input": "select",
+          "options": [
+            "stats_number_students",
+            "stats_student_staff_ratio",
+            "stats_pc_intl_students"
+          ],
+          "labels": [
+            "No. of Students",
+            "Student to Staff Ratio",
+            "Percentage of International Students"
+          ],
+          "name": "Select Stat:"
+        }
         }
       ],
-    "transform": [
+      "transform": [
       {
         "calculate": "parseInt(datum.stats_number_students)",
         "as": "stdNo"
       },
-      {"calculate": "datum[cs]", "as": "selectedCriteria"}
+      {"calculate": "datum[cs]", "as": "selectedCriteria"},
+      {"calculate": "datum[sc]", "as": "criteriaSelected"}
     ],
-    "mark": "point",
+    "mark": {"type":"point", "size":300},
     "encoding": {
-      "x": {"field": "stdNo", "type": "quantitative", "title":"No. of Students (Thousands)", "axis":{"titleColor":"white"}},
-      "y": {"field": "selectedCriteria", "type": "quantitative", "title":"Selected Score", "scale": {"domain": [30, 100], "nice": true}, "axis":{"titleColor":"white"}},
+      "x": {"field": "criteriaSelected", "type": "quantitative", "title":"Selected Stat", "axis":{"titleColor":"white", "labelColor":"white"}},
+      "y": {"field": "selectedCriteria", "type": "quantitative", "title":"Selected Score", "scale": {"domain": [30, 100], "nice": true}, "axis":{"titleColor":"white", "labelColor":"white"}},
       "color":{
         "field":"name",
         "scale":{"scheme":"category20"}
@@ -46,7 +67,7 @@
       "tooltip": [
         {"field": "name", "title": "University"},
         {"field": "selectedCriteria", "title": "Score"},
-        {"field": "stats_number_students", "title": "No. of Students"}
+        {"field": "criteriaSelected", "title": "Stat"}
       ]
     },
     "config": {
