@@ -25,7 +25,7 @@
         "color": {
           "field": "Number of Universities",
           "type": "quantitative",
-          "scale": {"type": "log", "scheme": "bluegreen", "domain": ["1", "160"]}
+          "scale": {"type": "log", "scheme": "teals", "domain": ["1", "160"]}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},

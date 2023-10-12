@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Grouped Bar Chart of University Scores",
+    "width": "container",
+    "height": "container",
+    "data": {
+      "url": "https://raw.githubusercontent.com/whuo0004/3179DV2/main/Datasets/scores_top20.csv"
+    },
+    "params": [
+      {
+        "name": "pts",
+        "select": {"type": "point", "fields": ["category"]},
+        "bind": "legend"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "name",
+        "type": "nominal",
+        "axis": {"title": "University", "titleColor":"white", "labelColor":"white"}
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "axis": {"title": "Score", "titleColor":"white", "labelColor":"white"}
+      },
+      "color": {
+        "field": "category",
+        "type": "nominal",
+        "scale": {"scheme": "teals"}
+      },
+      "opacity": {
+        "condition": {
+          "param": "pts",
+          "value": 1
+        },
+        "value": 0.6
+      },
+      "tooltip": [
+        {"field": "name", "type": "nominal", "title": "University"},
+        {"field": "value", "type": "quantitative", "title": "Score"},
+        {"field": "category", "type": "nominal", "title": "Category"}
+      ]
+    },
+    "config": {
+        "background":null,
+        "legend": {"symbolLimit":50, "symbolSize":100, "title":null, "labelColor": "white"}
+    }
+  }
+  

@@ -44,6 +44,6 @@
     ],
     "config": {
         "background":null,
-        "legend": {"symbolLimit":50, "symbolSize":5, "title":null, "labelColor": "white"}
+        "legend": {"symbolLimit":50, "symbolSize":100, "title":null, "labelColor": "white"}
     }
   }
