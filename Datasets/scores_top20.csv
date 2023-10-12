@@ -89,3 +89,13 @@ University of Toronto,scores_research,93.3
 University of Toronto,scores_citations,92.8
 University of Toronto,scores_industry_income,65.5
 University of Toronto,scores_international_outlook,89.7
+National University of Singapore,scores_teaching,76.4
+National University of Singapore,scores_research,93
+National University of Singapore,scores_citations,90.2
+National University of Singapore,scores_industry_income,87
+National University of Singapore,scores_international_outlook,94
+Cornell University,scores_teaching,80.2
+Cornell University,scores_research,86.1
+Cornell University,scores_citations,97.3
+Cornell University,scores_industry_income,40.4
+Cornell University,scores_international_outlook,76.9
