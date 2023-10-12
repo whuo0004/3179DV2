@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": "container",
+    "width": "container",
+    "data": {
+      "url": "https://raw.githubusercontent.com/whuo0004/3179DV2/main/Datasets/rankings_country.csv"
+    },
+    "params": [
+      {
+        "name": "threshold",
+        "value": 50,
+        "bind": {"input": "range", "min": 0, "max": 100, "name": "Top 1000 University Count Greater than: "}
+      }
+    ],
+    "transform": [
+      {"filter": {"field": "loc_count", "gte": {"signal": "threshold"}}}
+    ],
+    "encoding": {
+      "theta": {"field": "loc_count", "type": "quantitative", "stack": true},
+      "color": {
+        "field": "location",
+        "type": "nominal",
+        "scale": {"scheme": "category20"}
+      }
+    },
+    "layer": [
+      {"mark": {"type": "arc", "outerRadius": 190}},
+      {
+        "mark": {"type": "text", "radius": 100},
+        "encoding": {
+          "text": {"field": "location", "type": "nominal"},
+          "color": {"value": "black"},
+          "size": {"value": 10},
+          "tooltip": [
+            {"field": "location", "type": "nominal", "title": "Country"},
+            {
+              "field": "loc_count",
+              "type": "quantitative",
+              "title": "No. of Universities in Top 1000"
+            }
+          ]
+        }
+      }
+    ],
+    "config": {
+        "background":null,
+        "legend": {"symbolLimit":50, "symbolSize":5, "title":null, "labelColor": "white"}
+    }
+  }

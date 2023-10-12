@@ -1,0 +1,91 @@
+﻿name,category,value
+University of Oxford,scores_teaching,92.3
+University of Oxford,scores_research,99.7
+University of Oxford,scores_citations,99
+University of Oxford,scores_industry_income,74.9
+University of Oxford,scores_international_outlook,96.2
+Harvard University,scores_teaching,94.8
+Harvard University,scores_research,99
+Harvard University,scores_citations,99.3
+Harvard University,scores_industry_income,49.5
+Harvard University,scores_international_outlook,80.5
+University of Cambridge,scores_teaching,90.9
+University of Cambridge,scores_research,99.5
+University of Cambridge,scores_citations,97
+University of Cambridge,scores_industry_income,54.2
+University of Cambridge,scores_international_outlook,95.8
+Stanford University,scores_teaching,94.2
+Stanford University,scores_research,96.7
+Stanford University,scores_citations,99.8
+Stanford University,scores_industry_income,65
+Stanford University,scores_international_outlook,79.8
+Massachusetts Institute of Technology,scores_teaching,90.7
+Massachusetts Institute of Technology,scores_research,93.6
+Massachusetts Institute of Technology,scores_citations,99.8
+Massachusetts Institute of Technology,scores_industry_income,90.9
+Massachusetts Institute of Technology,scores_international_outlook,89.3
+California Institute of Technology,scores_teaching,90.9
+California Institute of Technology,scores_research,97
+California Institute of Technology,scores_citations,97.3
+California Institute of Technology,scores_industry_income,89.8
+California Institute of Technology,scores_international_outlook,83.6
+Princeton University,scores_teaching,87.6
+Princeton University,scores_research,95.9
+Princeton University,scores_citations,99.1
+Princeton University,scores_industry_income,66
+Princeton University,scores_international_outlook,80.3
+"University of California, Berkeley",scores_teaching,86.4
+"University of California, Berkeley",scores_research,95.8
+"University of California, Berkeley",scores_citations,99
+"University of California, Berkeley",scores_industry_income,76.8
+"University of California, Berkeley",scores_international_outlook,78.4
+Yale University,scores_teaching,92.6
+Yale University,scores_research,92.7
+Yale University,scores_citations,97
+Yale University,scores_industry_income,55
+Yale University,scores_international_outlook,70.9
+Imperial College London,scores_teaching,82.8
+Imperial College London,scores_research,90.8
+Imperial College London,scores_citations,98.3
+Imperial College London,scores_industry_income,59.8
+Imperial College London,scores_international_outlook,97.5
+Columbia University,scores_teaching,89.4
+Columbia University,scores_research,87.7
+Columbia University,scores_citations,97.1
+Columbia University,scores_industry_income,44.8
+Columbia University,scores_international_outlook,79.9
+ETH Zurich,scores_teaching,82.6
+ETH Zurich,scores_research,95.4
+ETH Zurich,scores_citations,90.7
+ETH Zurich,scores_industry_income,59.1
+ETH Zurich,scores_international_outlook,97.7
+The University of Chicago,scores_teaching,86.5
+The University of Chicago,scores_research,88.8
+The University of Chicago,scores_citations,97.7
+The University of Chicago,scores_industry_income,56.2
+The University of Chicago,scores_international_outlook,74.2
+University of Pennsylvania,scores_teaching,86
+University of Pennsylvania,scores_research,88.8
+University of Pennsylvania,scores_citations,97
+University of Pennsylvania,scores_industry_income,75.8
+University of Pennsylvania,scores_international_outlook,71.5
+Johns Hopkins University,scores_teaching,79.4
+Johns Hopkins University,scores_research,91.5
+Johns Hopkins University,scores_citations,97
+Johns Hopkins University,scores_industry_income,89.5
+Johns Hopkins University,scores_international_outlook,75.3
+Tsinghua University,scores_teaching,90.1
+Tsinghua University,scores_research,97.4
+Tsinghua University,scores_citations,88
+Tsinghua University,scores_industry_income,100
+Tsinghua University,scores_international_outlook,40.3
+Peking University,scores_teaching,92.5
+Peking University,scores_research,96.7
+Peking University,scores_citations,80.4
+Peking University,scores_industry_income,91.8
+Peking University,scores_international_outlook,65
+University of Toronto,scores_teaching,77.3
+University of Toronto,scores_research,93.3
+University of Toronto,scores_citations,92.8
+University of Toronto,scores_industry_income,65.5
+University of Toronto,scores_international_outlook,89.7

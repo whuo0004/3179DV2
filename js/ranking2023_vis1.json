@@ -92,7 +92,7 @@
   "config": {
     "background":null,
     "parameter": {
-      "separator": "above"
+      "separator":"above"
     }
   }
 }

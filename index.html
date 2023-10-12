@@ -75,13 +75,13 @@
                     <div class="content" style="width: 100%; height: 1000px;">
                         <br>
                         <h2>Rankings: Rank fluctuation of Top 20 University in 2023 (2013-2023)</h2>
-                        <div id="vis2" style="width: 100%; height: 65%;"></div>
+                        <div id="vis2" style="width: 100%; height: 60%;"></div>
                         <script type="text/javascript">
                             var spec1 = "js/ranking_years_vis2.json";
                             vegaEmbed('#vis2', spec1).then(function (result) {
                             }).catch(console.error);
                         </script>
-                        <p>
+                        <p style="text-align: justify">
                             The above chart visualises the fluctuation in rankings of the top 20 universities in 2023
                             over the years.
                             These rankings are determined by many different factors that this visualisation will
@@ -97,8 +97,7 @@
                             Tooltips are enabled for the visualisation above. By hovering over the points, further
                             details can be shown.
                             <br>
-                            To view the rank fluctuation of a specific university, click on the line for that specific
-                            university.
+                            Chart can be filtered by selection via the legend.
 
                         </p>
                     </div>
@@ -107,7 +106,7 @@
                     <div class="content">
                         <br>
                         <h2>This is Visualisation 2 (PLACEHOLDER)</h2>
-                        <p>
+                        <p style="text-align: justify">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at lacus sit amet metus
                             imperdiet maximus nec sit amet nisi. Donec ac tortor mi. Donec scelerisque feugiat
                             sollicitudin. Morbi scelerisque purus a odio rhoncus venenatis. Nulla sed urna dignissim,
@@ -159,64 +158,39 @@
                     </div>
                 </section>
                 <section id="Correlations" style="border: 2px solid #000">
-                    <div class="content"style="width: 100%; height: 1000px;">
+                    <div class="content" style="width: 100%; height: 1000px;">
                         <br>
-                        <h2>Correlations: Stats vs Different Scores</h2>
+                        <h2>Correlations: Stats vs Different Scores (2023 - Top 50)</h2>
                         <div id="vis4" style="width: 100%; height: 65%;"></div>
                         <script type="text/javascript">
                             var spec4 = "js/student_score_vis4.json";
                             vegaEmbed('#vis4', spec4).then(function (result) {
                             }).catch(console.error);
                         </script>
-                        <p>
-                            The above chart visualises the correlations of statistics and scores of the top 50 universities in 2023.
-                            The available statistics includes the number of students, the percentage of international students and the student to staff ratio.
-
-                            <br>
-                            Some observation that can be made includes universities that have more international students usually have a higher international outlook.
-                            Another possible observation is that universities with a low student to staff ratio usually hava a higher teaching score.
-                            <br>
+                        <p style="text-align: justify">
+                            The above chart visualises the correlations of statistics and scores of the top 50
+                            universities in 2023.
+                            Some observation that can be made includes universities that have more international
+                            students usually have a higher international outlook. and that universities with a low
+                            student to staff ratio usually hava a higher teaching score.
                             <br>
                             Tooltips are enabled for the visualisation above. By hovering over the points, further
                             details about the selected score and stat can be shown.
                             <br>
                             To choose the score and stat, please select the desired score/stat from the drop down menu.
-        
-                        </p>
-                    </div>
-                </section>
-                <section id="Locations" style="border: 2px solid #000">
-                    <div class="content"style="width: 100%; height: 1000px;">
-                        <br>
-                        <h2>Location: Number of Top 1000 Universities in different countries</h2>
-                        <p>
-                            The map below visualises the number of top 1000 universities in each different countries.
                             <br>
-                            It can be observed that countries such as the United States of America, United Kingdom and
-                            China have the most top 1000 universities. It can also be observed that most small countries
-                            have at least a few universities in the top 1000. However, less developed countries usually
-                            have no universities ranked in the top 1000. From these observation, it can be concluded
-                            that the number of top universities in a country depends on how developed the country are.
-                            Vice versa, this map also shows which country seems to be more developed.
-                            <br>
-                            <br>
-                            Tooltips are enabled for the visualisation below. By hovering over the points, further
-                            details can be shown.
+                            Chart can be filtered by selection via the legend.
 
                         </p>
-                        <div id="vis3" style="width: 100%; height: 65%; align-self: center;"></div>
-                        <script type="text/javascript">
-                            var spec3 = "js/ranking_countries_vis3.json";
-                            vegaEmbed('#vis3', spec3).then(function (result) {
-                            }).catch(console.error);
-                        </script>
                     </div>
                 </section>
             </div>
             <div class="pure-u-1 pure-u-md-1-3" style="border: 4px solid #000">
-                <h2 style="padding-left: 25px; padding-top: 45px">Top 50 University by Chosen Ranking and Chosen
+                <h2 style="padding-left: 25px; padding-top: 45px; padding-right:25px;">Top 50 University by Chosen
+                    Ranking and Chosen
                     Indicator 2023</h2>
-                <p style="padding-left:25px">The following chart visualises the rankings and the indicator scores
+                <p style="padding-left:25px; padding-right:25px; text-align: justify;">The following chart visualises
+                    the rankings and the indicator scores
                     selected by the User. The chart is sorted based on the rankings selected where the first row will be
                     the university ranked 1 in the selected ranking and the bar visualises the score obtained by the
                     university in the selected indicator. By hovering over the bar, the tooltip shows the values in
@@ -225,7 +199,7 @@
                     The filters are available at the bottom of the chart.
                 </p>
                 <br>
-                <div id="vis1" style="width: 100%; height: 80%;"></div>
+                <div id="vis1" style="width: 100%; height: 60%;padding-left:25px; padding-right:25px;"></div>
                 <script type="text/javascript">
                     var spec2 = "js/ranking2023_vis1.json";
                     vegaEmbed('#vis1', spec2).then(function (result) {
@@ -233,9 +207,57 @@
                 </script>
                 <br>
                 <br>
-                <p style="padding-left:25px">The rankings does not necessary indicate how good a university is but is used to inform the statistics or scores in a indicator. Having the top rank in any category does not mean the university is the best. </p>
+                <p style="padding-left:25px; text-align: justify; padding-right:25px;">The rankings does not necessary
+                    indicate how good a university is but is
+                    used to inform the statistics or scores in a indicator. Having the top rank in any category does not
+                    mean the university is the most suitable. Different individuals must have their ownopinion on what
+                    is the most suitable based on themselves. </p>
             </div>
         </div>
+        <section id="Locations" style="border: 2px solid #000">
+            <div class="content" style="width: 100%; height: 1900px;">
+                <br>
+                <h2>Location: Number of Top 1000 Universities in different countries</h2>
+                <p style="text-align: justify">
+                    The map below visualises the number of top 1000 universities in each different countries.
+                    <br>
+                    It can be observed that countries such as the United States of America, United Kingdom and
+                    China have the most top 1000 universities. It can also be observed that most small countries
+                    have at least a few universities in the top 1000. However, less developed countries usually
+                    have no universities ranked in the top 1000. From these observation, it can be concluded
+                    that the number of top universities in a country depends on how developed the country are.
+                    Vice versa, this map also shows which country seems to be more developed.
+                    <br>
+                    <br>
+                    Tooltips are enabled for the visualisation below. By hovering over the points, further
+                    details can be shown.
+
+                </p>
+                <div id="vis3" style="width: 100%; height: 40%; align-self: center;"></div>
+                <script type="text/javascript">
+                    var spec3 = "js/ranking_countries_vis3.json";
+                    vegaEmbed('#vis3', spec3).then(function (result) {
+                    }).catch(console.error);
+                </script>
+                <h2>Top 1000 University Count Greater than Selected Value (0 to 100)</h2>
+                <div id="vis5" style="width: 100%; height: 30%; align-self: center;"></div>
+                <script type="text/javascript">
+                    var spec5 = "js/countries_perc_vis5.json";
+                    vegaEmbed('#vis5', spec5).then(function (result) {
+                    }).catch(console.error);
+                </script>
+                <p style="text-align: justify">
+                    The pie chart above further visualise the amount of top 1000 universities each country has.
+                    <br>
+                    <br>
+                    Tooltips are enabled for the visualisation below. By hovering over the text, further
+                    details can be shown.
+                    <br>
+                    The sliders can be used to filter the data further.
+
+                </p>
+            </div>
+        </section>
         <div class="footer" style="color: rgb(255, 255, 255);">
             Designed and Created by Huong Wen Cheng (32022905)<br>
             Data obtained from <b>Andrii Kapatsyn's</b> dataset on <b>THE World University Rankings 2011-2023</b>

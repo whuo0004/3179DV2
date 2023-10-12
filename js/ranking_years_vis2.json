@@ -7,7 +7,8 @@
     },
     "params": [{
       "name": "pts",
-      "select": "point"
+      "select": {"type": "point", "fields": ["name"]},
+      "bind":"legend"
     }],
     "transform": [
       {
@@ -40,7 +41,7 @@
           "param": "pts",
           "scale": { "scheme": "category20"}
         },
-        "value": "lightgrey"
+        "value": null
       },
       "tooltip": [
         {"field": "name", "type": "nominal", "title": "University" },

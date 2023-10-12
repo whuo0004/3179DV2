@@ -46,6 +46,11 @@
           ],
           "name": "Select Stat:"
         }
+        },
+        {
+          "name": "pts",
+          "select": {"type": "point", "fields": ["name"]},
+          "bind":"legend"
         }
       ],
       "transform": [
@@ -56,13 +61,19 @@
       {"calculate": "datum[cs]", "as": "selectedCriteria"},
       {"calculate": "datum[sc]", "as": "criteriaSelected"}
     ],
-    "mark": {"type":"point", "size":300},
+    "mark": {"type":"point", "filled": true},
     "encoding": {
       "x": {"field": "criteriaSelected", "type": "quantitative", "title":"Selected Stat", "axis":{"titleColor":"white", "labelColor":"white"}},
       "y": {"field": "selectedCriteria", "type": "quantitative", "title":"Selected Score", "scale": {"domain": [30, 100], "nice": true}, "axis":{"titleColor":"white", "labelColor":"white"}},
+      "size": {"value": 300},
       "color":{
-        "field":"name",
-        "scale":{"scheme":"category20"}
+        "condition": {
+          "field": "name",
+          "type": "nominal",
+          "param": "pts",
+          "scale": { "scheme": "category20"}
+        },
+        "value": null
       },
       "tooltip": [
         {"field": "name", "title": "University"},
@@ -72,6 +83,6 @@
     },
     "config": {
         "background":null,
-        "legend": {"disable": true}
+        "legend": {"symbolLimit":50, "symbolSize":5, "title":null, "labelColor": "white"}
       }
   }
